@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Installing .vimrc..."
-cp .vimrc ~/.vimrc
+cp vimrc ~/.vimrc
 
 echo "Preparing Pathogen..."
 echo "Creating directories"

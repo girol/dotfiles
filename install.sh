@@ -11,6 +11,13 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle
 echo "Downloading Pathogen and installing..."
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
+echo "Preparing Plugins..."
+
+echo "Installing airline"
+git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
+
+
+
 echo
 echo "vimrc installed into $HOME/.vimrc"
 echo

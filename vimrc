@@ -1,18 +1,37 @@
-" .vimrc basic file use
+" My personal Vim configuration
+"
+" Author: André Luiz Girol
+"
+" last update: Feb 24, 2018
+"
+"
+" ------- TL;DR ------- go to 'Basic Customization'
+"
+" Long time ago, I've starting using vim with the basic:
+"
+" i -> type, type, type <ESC>:wq
+"
+" Since the smartest people I know in my life uses vim, 
+" I decided to give it a shot.
+"
+" This is still a work in progress and the install script shipped here
+" installs some plugins I loved to use
+"
+" This is also a vim training, so I can practice &:)
 
-" last update: 29/10/2015
+" ------- Basic Customization -------
 
-" ------- PLUGINS ---------
+" enables syntax
+syntax on
 
-" pathogen - enables easy plugin installation
-execute pathogen#infect()
+" Enables a basic theme packed with vim
+" I'm still choosing the one I like most
+" To play around, use in command mode:
+" 
+" colorscheme <TAB>
 
-" Shortcut for NERDTree plugin
-" Toggles NERDTree on and off
-map <C-n> :NERDTreeToggle<CR>
-
-
-" ------- PLUGINS - END ----------
+"colorscheme pablo
+colorscheme elflord
 
 " enables autoident
 set ai
@@ -24,12 +43,6 @@ set incsearch
 set hlsearch
 
 
-
-" enables syntax
-syntax on
-
-" enables basic theme (packed with vim)
-colorscheme evening
 
 " enables line numbers
 set number
@@ -45,3 +58,16 @@ set shiftwidth=4
 
 " sets auto completion for PHP language 
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+
+" ------- PLUGINS ---------
+
+" pathogen - enables easy plugin installation
+execute pathogen#infect()
+
+" Shortcut for NERDTree plugin
+" Toggles NERDTree on and off
+map <C-n> :NERDTreeToggle<CR>
+
+
+" ------- PLUGINS - END ----------
+

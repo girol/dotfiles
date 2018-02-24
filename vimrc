@@ -20,9 +20,18 @@
 " This is also a vim training, so I can practice &:)
 
 " ------- Basic Customization -------
-
+"
+" Here I try to group some tweaks by context. A work in progress
+" I give small hints of what is what to help rememberance
+" 
+" I know that there is vimsensible out there, but this is also
+" a case study that may be helpful to someone
+"
+" ==== Syntax and Visuals ====
+"
 " enables syntax
 syntax on
+set number " enables line numbers
 
 " Enables a basic theme packed with vim
 " I'm still choosing the one I like most
@@ -32,42 +41,33 @@ syntax on
 
 "colorscheme pablo
 colorscheme elflord
+set background=dark
 
-" enables autoident
-set ai
+" ==== Spaces and Search ====
+"
+set ai " enables autoident
+set incsearch " enables incremental search
+set hlsearch " enables highlighted search
 
-" enables incremental search
-set incsearch
-
-" enables highlighted search
-set hlsearch
-
-
-
-" enables line numbers
-set number
-
-" always use spaces instead of tab chars
-set expandtab
-
-" sets size of tab
-set tabstop=4
-
-" sets auto indentation 
-set shiftwidth=4
-
-" sets auto completion for PHP language 
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
 " ------- PLUGINS ---------
 
 " pathogen - enables easy plugin installation
 execute pathogen#infect()
 
+
+" ==== Plugin Tweaks ====
+
+" allows airline bar with cool icons <3
+let g:airline_powerline_fonts = 1
+
+
+" ------- Shortcuts -------
+
 " Shortcut for NERDTree plugin
 " Toggles NERDTree on and off
 map <C-n> :NERDTreeToggle<CR>
 
-
-" ------- PLUGINS - END ----------
-
+" ------- Langages Related - WIP -------
+" sets auto completion for PHP language 
+" autocmd FileType php set omnifunc=phpcomplete#CompletePHP

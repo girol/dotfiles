@@ -19,6 +19,10 @@ git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
 echo "Installing vim-devicons"
 git clone https://github.com/ryanoasis/vim-devicons ~/.vim/bundle/vim-devicons
 
+
+echo "Installing NERDtree"
+git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+
 echo
 echo "vimrc installed into $HOME/.vimrc"
 echo

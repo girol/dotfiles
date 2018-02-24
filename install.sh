@@ -36,6 +36,11 @@ git clone https://github.com/Xuyuanp/nerdtree-git-plugin.git ~/.vim/bundle/nerdt
 echo "Installing vim-gitgutter"
 git clone git://github.com/airblade/vim-gitgutter.git ~/.vim/bundle/vim-gitgutter
 
+# A Git wrapper that adds a lot of new commands and "gitties" to vim
+echo "Installing vim-fugitive"
+git clone https://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive
+
+
 
 echo
 echo "vimrc installed into $HOME/.vimrc"

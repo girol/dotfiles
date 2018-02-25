@@ -13,6 +13,10 @@ echo "Downloading Pathogen and installing..."
 
 echo "Preparing Plugins..."
 
+# My actual theme... Still looking for the perfect one"
+echo "Installing Solarized Theme"
+git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/vim-colors-solarized
+
 # Adds a beautiful status bar in the bottom
 echo "Installing airline"
 git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
@@ -39,7 +43,6 @@ git clone git://github.com/airblade/vim-gitgutter.git ~/.vim/bundle/vim-gitgutte
 # A Git wrapper that adds a lot of new commands and "gitties" to vim
 echo "Installing vim-fugitive"
 git clone https://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive
-
 
 
 echo

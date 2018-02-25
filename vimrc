@@ -63,6 +63,9 @@ set hlsearch " enables highlighted search
 " allows airline bar with cool icons <3
 let g:airline_powerline_fonts = 1
 
+" adds solarized 256 colors
+let g:solarized_termcolors=256
+
 " Makes vim uptates faster. As of version 7.2, the update time is 4000ms.
 " This is set to vim-gitgutter get faster when showing edited lines.
 " slower numbers gets more glitches

@@ -19,6 +19,15 @@
 "
 " This is also a vim training, so I can practice &:)
 
+" ------- PLUGINS ---------
+" Put your plugin calls as soon as possilbe
+" Some themes use plugin managers and you will 
+" endo up with a not found message.
+
+" pathogen - enables easy plugin installation
+execute pathogen#infect()
+
+
 " ------- Basic Customization -------
 "
 " Here I try to group some tweaks by context. A work in progress
@@ -40,7 +49,7 @@ set number " enables line numbers
 " colorscheme <TAB>
 
 "colorscheme pablo
-colorscheme elflord
+colorscheme solarized
 set background=dark
 
 " ==== Spaces and Search ====
@@ -48,13 +57,6 @@ set background=dark
 set ai " enables autoident
 set incsearch " enables incremental search
 set hlsearch " enables highlighted search
-
-
-" ------- PLUGINS ---------
-
-" pathogen - enables easy plugin installation
-execute pathogen#infect()
-
 
 " ==== Plugin Tweaks ====
 

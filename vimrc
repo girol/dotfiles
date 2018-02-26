@@ -2,7 +2,7 @@
 "
 " Author: André Luiz Girol
 "
-" last update: Feb 24, 2018
+" last update: Feb  , 2018
 "
 "
 " ------- TL;DR ------- go to 'Basic Customization'
@@ -32,24 +32,34 @@ execute pathogen#infect()
 " ------- Basic Customization -------
 "
 " Here I try to group some tweaks by context. A work in progress.
-" I give small hints of what is what to help rememberance
+" I give small hints of what is what to help rememberance.
 " 
 " I know that there is vimsensible out there, but this is also
-" a case study that may be helpful to someone
+" a case study that may be helpful to someone.
 "
 " ==== Syntax and Visuals ====
-"
+
 " If you use 'syntax on' it will override your configs. See :help syntax
 syntax enable 
 set number " enables line numbers
 
-" ==== Spaces and Search ====
+" ==== Spaces and Tabs ====
 
 set ai " enables autoident
-set incsearch " enables incremental search
-set hlsearch " enables highlighted search
+set expandtab " expands tabs to spaces
+set tabstop=4 " size of tabs
+set shiftwidth=4 " size of 'autoidenter'<< and >>
+set softtabstop=4 " some mojo I'm still testing
 
-" ==== Plugin Tweaks ====
+" ==== Search Behavior ====
+
+" enables incremental search, search moves while you type
+set incsearch 
+
+" enables highlighted search. Highlight what you search
+set hlsearch 
+
+" ------- Plugin Tweaks -------
 
 " allows airline bar with cool icons <3 - Install a Patched font
 let g:airline_powerline_fonts = 1

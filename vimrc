@@ -20,9 +20,10 @@
 " This is also a vim training, so I can practice &:)
 
 " ------- PLUGINS ---------
+
 " Put your plugin calls as soon as possilbe
 " Some themes use plugin managers and you will 
-" endo up with a not found message.
+" end up with a 'not found' message.
 
 " pathogen - enables easy plugin installation
 execute pathogen#infect()
@@ -30,7 +31,7 @@ execute pathogen#infect()
 
 " ------- Basic Customization -------
 "
-" Here I try to group some tweaks by context. A work in progress
+" Here I try to group some tweaks by context. A work in progress.
 " I give small hints of what is what to help rememberance
 " 
 " I know that there is vimsensible out there, but this is also
@@ -38,40 +39,27 @@ execute pathogen#infect()
 "
 " ==== Syntax and Visuals ====
 "
-" enables syntax
-syntax on
+" If you use 'syntax on' it will override your configs. See :help syntax
+syntax enable 
 set number " enables line numbers
 
-" Enables a basic theme packed with vim
-" I'm still choosing the one I like most
-" To play around, use in command mode:
-" 
-" colorscheme <TAB>
-
-"colorscheme pablo
-colorscheme solarized
-set background=dark
-
 " ==== Spaces and Search ====
-"
+
 set ai " enables autoident
 set incsearch " enables incremental search
 set hlsearch " enables highlighted search
 
 " ==== Plugin Tweaks ====
 
-" allows airline bar with cool icons <3
+" allows airline bar with cool icons <3 - Install a Patched font
 let g:airline_powerline_fonts = 1
 
-" adds solarized 256 colors
+" adds solarized 256 colors in terminal. Default is 16.
 let g:solarized_termcolors=256
 
-" Makes vim uptates faster. As of version 7.2, the update time is 4000ms.
+" Changes vim refresh rate. As of version 7.2, the refresh rate is 4000ms.
 " This is set to vim-gitgutter get faster when showing edited lines.
-" slower numbers gets more glitches
-" More information with
-"
-" :h updatetime
+" slower numbers gets more glitches. See :help updatetime
 set updatetime=750
 
 " ------- Shortcuts -------
@@ -80,6 +68,17 @@ set updatetime=750
 " Toggles NERDTree on and off
 map <C-n> :NERDTreeToggle<CR>
 
-" ------- Langages Related - WIP -------
+
+" ------- TODO: Languages Related  -------
+
 " sets auto completion for PHP language 
 " autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+
+" ------- Themes -------
+
+" Solarized is installed with this script
+" If you dont like it, comment next lines
+" You *MUST* set up the background before the colorsheme.
+" Otherwise will cause some issues. It took me hours to figure.
+set background=dark
+colorscheme solarized

@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# TODO:
+# Implementar instalação do tema:
+# https://github.com/nanotech/jellybeans.vim
+
 echo "Installing .vimrc..."
 cp vimrc ~/.vimrc
 

@@ -92,3 +92,7 @@ map <C-n> :NERDTreeToggle<CR>
 " Otherwise will cause some issues. It took me hours to figure.
 set background=dark
 colorscheme solarized
+
+" ------- Interface Tweaks ------
+" Deixa o contador de linhas em cinza
+highlight LineNr ctermfg=grey

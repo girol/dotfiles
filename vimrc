@@ -70,7 +70,7 @@ let g:solarized_termcolors=256
 " Changes vim refresh rate. As of version 7.2, the refresh rate is 4000ms.
 " This is set to vim-gitgutter get faster when showing edited lines.
 " slower numbers gets more glitches. See :help updatetime
-set updatetime=750
+set updatetime=2000
 
 " ------- Shortcuts -------
 

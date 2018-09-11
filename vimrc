@@ -25,8 +25,40 @@
 " Some themes use plugin managers and you will 
 " end up with a 'not found' message.
 
-" pathogen - enables easy plugin installation
-execute pathogen#infect()
+" vim-plug - enables easy plugin installation with git versioning
+
+call plug#begin('~/.vim/plugged')
+
+" Searches github "
+
+" Old theme. Too dark, low contrast...
+" Plug 'altercation/vim-colors-solarized' 
+
+" My actual theme... Still looking for the perfect one" 
+Plug 'morhetz/gruvbox'
+
+" Adds a beautiful status bar in the bottom
+Plug 'vim-airline/vim-airline'
+
+" Allows icons inside vim and other plugins
+" You MUST install a patched font.
+Plug 'ryanoasis/vim-devicons'
+
+" Nice file manager for vim
+Plug 'scrooloose/nerdtree' 
+
+"git stuff"
+
+" Git status indicators for files in NERDtree
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+" Git plugin that shows which lines have been added, modified, or removed.
+Plug 'airblade/vim-gitgutter'
+
+" A Git wrapper that adds a lot of new commands and 'gitties' to vim
+Plug 'tpope/vim-fugitive'
+
+call plug#end()
 
 
 " ------- Basic Customization -------
@@ -64,8 +96,14 @@ set hlsearch
 " allows airline bar with cool icons <3 - Install a Patched font
 let g:airline_powerline_fonts = 1
 
-" adds solarized 256 colors in terminal. Default is 16.
-let g:solarized_termcolors=256
+" airline theme:
+let g:airline_theme='gruvbox'
+
+" adds 256 colors in terminal. Default is 16. Just in case
+let g:gruvbox_termcolors=256
+
+" High contrast baby!
+let g:gruvbox_contrast_dark='hard'
 
 " Changes vim refresh rate. As of version 7.2, the refresh rate is 4000ms.
 " This is set to vim-gitgutter get faster when showing edited lines.
@@ -91,7 +129,7 @@ map <C-n> :NERDTreeToggle<CR>
 " You *MUST* set up the background before the colorsheme.
 " Otherwise will cause some issues. It took me hours to figure.
 set background=dark
-colorscheme solarized
+colorscheme gruvbox
 
 " ------- Interface Tweaks ------
 " Deixa o contador de linhas em cinza

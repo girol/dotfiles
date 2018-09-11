@@ -1,53 +1,26 @@
 #!/bin/bash
 
-# TODO:
-# Implementar instalação do tema:
-# https://github.com/nanotech/jellybeans.vim
+echo "==========================="
+echo "Welcome to Girol's Dotfiles"
+echo "==========================="
+
+
+trap 'error_handler' ERR
+
+error_handler() {
+    echo "An error has occured... :(";
+}
+
 
 echo "Installing .vimrc..."
 cp vimrc ~/.vimrc
 
-echo "Preparing Pathogen..."
-echo "Creating directories"
 
-mkdir -p ~/.vim/autoload ~/.vim/bundle 
+echo "Preparing vim-plug..."
 
-echo "Downloading Pathogen and installing..."
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-
-echo "Preparing Plugins..."
-
-# My actual theme... Still looking for the perfect one"
-echo "Installing Solarized Theme"
-git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/vim-colors-solarized
-
-# Adds a beautiful status bar in the bottom
-echo "Installing airline"
-git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
-
-# Allows icons inside vim and other plugins
-# You MUST install a patched font.
-echo "Installing vim-devicons"
-git clone https://github.com/ryanoasis/vim-devicons ~/.vim/bundle/vim-devicons
-
-# Nice file manager for vim
-echo "Installing NERDtree"
-git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
-
-echo "Installing git stuff"
-
-# Git status indicators for files in NERDtree
-echo "Installing nerdtree-git-plugin"
-git clone https://github.com/Xuyuanp/nerdtree-git-plugin.git ~/.vim/bundle/nerdtree-git-plugin
-
-# Git plugin that shows which lines have been added, modified, or removed.
-echo "Installing vim-gitgutter"
-git clone git://github.com/airblade/vim-gitgutter.git ~/.vim/bundle/vim-gitgutter
-
-# A Git wrapper that adds a lot of new commands and "gitties" to vim
-echo "Installing vim-fugitive"
-git clone https://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive
-
+echo "Downloading and installing..."
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 echo
 echo "vimrc installed into $HOME/.vimrc"

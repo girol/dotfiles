@@ -1,5 +1,9 @@
 #!/bin/bash
-
+# let's env it:
+. ./env
+# Nice colors
+. ./colors
+echo $white
 
 
 echo "==========================="

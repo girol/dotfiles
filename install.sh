@@ -3,8 +3,6 @@
 . ./env
 # Nice colors
 . ./colors
-echo $white
-
 
 echo "==========================="
 echo -e "Welcome to ${green}Girol's Dotfiles${clear}"
@@ -15,6 +13,6 @@ trap 'error_handler' ERR
 
 error_handler() {
     #TODO: show error in module
-    echo "An error has occured... :("
+    echo -e "${red} [ ERROR ] ${clear} An error has occured... :("
     exit 1
 }

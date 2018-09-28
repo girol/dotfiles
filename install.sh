@@ -1,32 +1,16 @@
 #!/bin/bash
 
-echo "==========================="
-echo "Welcome to Girol's Dotfiles"
-echo "==========================="
 
 
+echo "==========================="
+echo -e "Welcome to ${green}Girol's Dotfiles${clear}"
+echo "==========================="
+
+# Error handling (a bit sloppy =^.^=)
 trap 'error_handler' ERR
 
 error_handler() {
-    echo "An error has occured... :(";
+    #TODO: show error in module
+    echo "An error has occured... :("
+    exit 1
 }
-
-
-echo "Installing .vimrc..."
-cp vimrc ~/.vimrc
-
-
-echo
-echo "vimrc installed into $HOME/.vimrc"
-echo
-
-echo "Preparing vim-plug..."
-
-echo "Downloading and installing..."
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-echo "Plugging..."
-echo
-
-vim +PlugInstall +qall

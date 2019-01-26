@@ -16,13 +16,14 @@
 sudo apt install \
     python3-pip  \
     python3-setuptools \
-    ipython
+    ipython3
 
 # Aplicando para python2
 
 sudo apt install \
     python-pip \
-    python-setuptools
+    python-setuptools \
+    ipython
 
 # instalando iPython com Jupyter Notebook
 pip3 install wheel # dependência em python que padroniza distribuição de pacotes

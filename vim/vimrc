@@ -2,7 +2,7 @@
 "
 " Author: André Luiz Girol
 "
-" last update: Feb  , 2018
+" last update: Jun, 2019
 "
 "
 " ------- TL;DR ------- go to 'Basic Customization'
@@ -19,7 +19,7 @@
 "
 " This is also a vim training, so I can practice &:)
 
-" ------- PLUGINS ---------
+" ------- PLUGIN INSTALLATION ---------
 
 " Put your plugin calls as soon as possilbe
 " Some themes use plugin managers and you will 
@@ -28,11 +28,6 @@
 " vim-plug - enables easy plugin installation with git versioning
 
 call plug#begin('~/.vim/plugged')
-
-" Searches github "
-
-" Old theme. Too dark, low contrast...
-" Plug 'altercation/vim-colors-solarized' 
 
 " My actual theme... Still looking for the perfect one" 
 Plug 'morhetz/gruvbox'
@@ -47,7 +42,7 @@ Plug 'ryanoasis/vim-devicons'
 " Nice file manager for vim
 Plug 'scrooloose/nerdtree' 
 
-"git stuff"
+" git stuff"
 
 " Git status indicators for files in NERDtree
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -60,8 +55,23 @@ Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
+" ====== Plugin Tweaks ======
 
-" ------- Basic Customization -------
+" allows airline bar with cool icons <3 - Install a Patched font
+let g:airline_powerline_fonts = 1
+
+" airline theme:
+let g:airline_theme='gruvbox'
+
+" adds 256 colors in terminal. Default is 16. Just in case
+let g:gruvbox_termcolors=256
+
+" High contrast baby!
+let g:gruvbox_contrast_dark='hard'
+
+
+
+" ------- CUSTOMIZATION -------
 "
 " Here I try to group some tweaks by context. A work in progress.
 " I give small hints of what is what to help rememberance.
@@ -91,20 +101,6 @@ set incsearch
 " enables highlighted search. Highlight what you search
 set hlsearch 
 
-" ------- Plugin Tweaks -------
-
-" allows airline bar with cool icons <3 - Install a Patched font
-let g:airline_powerline_fonts = 1
-
-" airline theme:
-let g:airline_theme='gruvbox'
-
-" adds 256 colors in terminal. Default is 16. Just in case
-let g:gruvbox_termcolors=256
-
-" High contrast baby!
-let g:gruvbox_contrast_dark='hard'
-
 " Changes vim refresh rate. As of version 7.2, the refresh rate is 4000ms.
 " This is set to vim-gitgutter get faster when showing edited lines.
 " slower numbers gets more glitches. See :help updatetime
@@ -117,20 +113,13 @@ set updatetime=2000
 map <C-n> :NERDTreeToggle<CR>
 
 
-" ------- TODO: Languages Related  -------
+" ------- Theme -------
 
-" sets auto completion for PHP language 
-" autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-
-" ------- Themes -------
-
-" Solarized is installed with this script
-" If you dont like it, comment next lines
 " You *MUST* set up the background before the colorsheme.
 " Otherwise will cause some issues. It took me hours to figure.
 set background=dark
 colorscheme gruvbox
 
-" ------- Interface Tweaks ------
-" Deixa o contador de linhas em cinza
+" ------- Theme Tweaks ------
+" Grey line numbers
 highlight LineNr ctermfg=grey

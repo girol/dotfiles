@@ -1,9 +1,22 @@
-# Configurações de ambiente
+# Setup your environment 
 
-Ainda não sei se escrevo essa joça em inglês ou PT-BR, mas não to afim agora de traduzir pro Trumpês, então vai em hu3 mesmo.
+Since I maintain 3 machines to work, I automated my installation to reflect the same environment in all of them.
 
-Este repositório guarda minhas configurações básicas de sistema. Inicialmente só configurações do vim. Posteriormente configurações de outros ambientes / linguagens.
+The idea is to create installable "modules" highly customizable.
 
-*Distribuição utilizada:* Ubuntu flavors (depende muito do humor)
+It used to host only my `.vimrc`, but maintain other packages, other languages and remember what to install, was a pain. 
 
-Instalador inspirado neste aqui: https://github.com/Phantas0s/.dotfiles
+
+**Linux Distribution:** Ubuntu flavors (Depends on the weather)
+
+**Current Distributin:** Linux Mint 19
+
+Inspired on this project: https://github.com/Phantas0s/.dotfiles
+
+## Environment Variables
+
+The `env` file stores them. Customize yours here.
+
+## Colors
+
+I love colorized terminals. I store basic colors in: `colors` file.

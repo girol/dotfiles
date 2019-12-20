@@ -2,4 +2,9 @@
 
 echo -e "Installing base packages"
 
-apt install vim
+apt install ack \
+        git \
+        tilix \
+        vim \
+        xclip \
+        zsh \

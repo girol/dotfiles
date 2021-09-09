@@ -8,6 +8,7 @@ sudo apt install ack \
     curl \
     git \
     gnupg \
+    make \
     software-properties-common \
     vim \
     xclip \

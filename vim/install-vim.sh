@@ -1,7 +1,7 @@
 #/bin/bash
 
 echo "Installing .vimrc..."
-cp $BASE_PATH/vimrc ~/.vimrc
+cp vimrc ~/.vimrc
 
 echo
 echo "vimrc installed into $HOME/.vimrc"

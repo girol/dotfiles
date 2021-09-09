@@ -2,47 +2,31 @@
 "
 " Author: André Luiz Girol
 "
-" last update: Jun, 2019
-"
-"
-" ------- TL;DR ------- go to 'Basic Customization'
-"
-" Long time ago, I've starting using vim with the basic:
-"
-" i -> type, type, type <ESC>:wq
-"
-" Since the smartest people I know in my life uses vim, 
-" I decided to give it a shot.
-"
-" This is still a work in progress and the install script shipped here
-" installs some plugins I loved to use
-"
-" This is also a vim training, so I can practice &:)
+" last update: Sep, 2021
 
 " ------- PLUGIN INSTALLATION ---------
 
 " Put your plugin calls as soon as possilbe
-" Some themes use plugin managers and you will 
+" Some themes use plugin managers and you will
 " end up with a 'not found' message.
 
 " vim-plug - enables easy plugin installation with git versioning
 
 call plug#begin('~/.vim/plugged')
 
-" My actual theme... Still looking for the perfect one" 
-Plug 'morhetz/gruvbox'
+" Maybe the perfect one is Dracula?"
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 " Adds a beautiful status bar in the bottom
 Plug 'vim-airline/vim-airline'
 
 " Allows icons inside vim and other plugins
-" You MUST install a patched font.
 Plug 'ryanoasis/vim-devicons'
 
 " Nice file manager for vim
-Plug 'scrooloose/nerdtree' 
+Plug 'scrooloose/nerdtree'
 
-" git stuff"
+" ==== GIT ===="
 
 " Git status indicators for files in NERDtree
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -57,49 +41,46 @@ call plug#end()
 
 " ====== Plugin Tweaks ======
 
-" allows airline bar with cool icons <3 - Install a Patched font
+" allows airline bar with cool icons <3
 let g:airline_powerline_fonts = 1
 
 " airline theme:
-let g:airline_theme='gruvbox'
+let g:airline_theme='dracula'
 
 " adds 256 colors in terminal. Default is 16. Just in case
-let g:gruvbox_termcolors=256
+let g:dracula_termcolors=256
 
 " High contrast baby!
-let g:gruvbox_contrast_dark='hard'
-
+let g:dracula_contrast_dark='hard'
 
 
 " ------- CUSTOMIZATION -------
 "
 " Here I try to group some tweaks by context. A work in progress.
 " I give small hints of what is what to help rememberance.
-" 
+"
 " I know that there is vimsensible out there, but this is also
 " a case study that may be helpful to someone.
-"
-" ==== Syntax and Visuals ====
 
+
+" ==== Syntax and Visuals ====
 " If you use 'syntax on' it will override your configs. See :help syntax
-syntax enable 
-set number " enables line numbers
+
+syntax enable
+set number         " enables line numbers
 
 " ==== Spaces and Tabs ====
 
-set ai " enables autoident
-set expandtab " expands tabs to spaces
-set tabstop=4 " size of tabs
-set shiftwidth=4 " size of 'autoidenter'<< and >>
-set softtabstop=4 " some mojo I'm still testing
+set ai             " enables autoident
+set expandtab      " expands tabs to spaces
+set tabstop=4      " size of tabs
+set shiftwidth=4   " size of 'autoidenter'<< and >>
+set softtabstop=4  " some mojo I'm still testing
 
 " ==== Search Behavior ====
 
-" enables incremental search, search moves while you type
-set incsearch 
-
-" enables highlighted search. Highlight what you search
-set hlsearch 
+set incsearch   " incremental search. Pointer moves while you type
+set hlsearch    " Highlight what you search
 
 " Changes vim refresh rate. As of version 7.2, the refresh rate is 4000ms.
 " This is set to vim-gitgutter get faster when showing edited lines.
@@ -108,18 +89,12 @@ set updatetime=2000
 
 " ------- Shortcuts -------
 
-" Shortcut for NERDTree plugin
 " Toggles NERDTree on and off
 map <C-n> :NERDTreeToggle<CR>
-
 
 " ------- Theme -------
 
 " You *MUST* set up the background before the colorsheme.
 " Otherwise will cause some issues. It took me hours to figure.
 set background=dark
-colorscheme gruvbox
-
-" ------- Theme Tweaks ------
-" Grey line numbers
-highlight LineNr ctermfg=grey
+colorscheme dracula

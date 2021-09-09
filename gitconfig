@@ -1,0 +1,16 @@
+[user]
+    name = André Luiz Girol
+    email = andregirol@gmail.com
+[core]
+    editor = vim
+[color]
+    ui = true
+[color "status"]
+    added = green bold
+    changed = yellow
+    untracked = cyan
+    deleted = red bold
+[push]
+    default = matching
+[init]
+    defaultBranch = main

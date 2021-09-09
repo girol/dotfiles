@@ -13,3 +13,6 @@ sudo apt install ack \
     vim \
     xclip \
     zsh \
+
+echo -e "Copying git config"
+cp ./gitconfig ~/.gitconfig

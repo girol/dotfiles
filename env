@@ -1,7 +1,0 @@
-#################################
-# Env Vars used in this project #
-#################################
-
-# The base folder (this)
-export BASE_PATH=$(pwd)
-

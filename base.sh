@@ -2,9 +2,13 @@
 
 echo -e "Installing base packages"
 
-apt install ack \
-        git \
-        tilix \
-        vim \
-        xclip \
-        zsh \
+sudo apt install ack \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    git \
+    gnupg \
+    software-properties-common \
+    vim \
+    xclip \
+    zsh \

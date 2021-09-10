@@ -10,9 +10,7 @@ sudo apt install ack \
     gnupg \
     make \
     software-properties-common \
+    stow \
     vim \
     xclip \
     zsh \
-
-echo -e "Copying git config"
-cp ./gitconfig ~/.gitconfig

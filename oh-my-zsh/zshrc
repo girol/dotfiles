@@ -2,34 +2,64 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/girol/.oh-my-zsh"
+export ZSH="/home/$HOME/.oh-my-zsh"
 
 ZSH_THEME="spaceship"
 
-# Spaceship customization
-source ~/Projetos/dotfiles/zsh/spaceship-theme-customization
+# =====================
+# Custom for spaceship
+# =====================
+
+# General
+SPACESHIP_USER_SHOW="true"
+
+# SPACESHIP_CHAR_SYMBOL="\uf1d0 " # rebel
+# SPACESHIP_CHAR_SYMBOL="\uf302" # apple
+
+SPACESHIP_CHAR_SYMBOL=">"
+SPACESHIP_CHAR_SUFFIX=(" ")
+SPACESHIP_CHAR_COLOR_SUCCESS="green"
+SPACESHIP_PROMPT_ADD_NEWLINE="false"
+SPACESHIP_PROMPT_DEFAULT_PREFIX="$USER @ "
+SPACESHIP_PROMPT_FIRST_PREFIX_SHOW="true"
+
+# Spaceship venv
+SPACESHIP_VENV_PREFIX="(\uf81f "
+SPACESHIP_VENV_COLOR="yellow"
+SPACESHIP_VENV_SUFFIX=") "
+SPACESHIP_KUBECTL_SHOW="true"
+
+# Spaceship Pyenv
+SPACESHIP_PYENV_SHOW="false"
+
+SPACESHIP_PROMPT_ORDER=(
+    venv
+    time
+    dir
+    git
+    exec_time
+    kubectl
+    line_sep
+    char
+    jobs
+)
+
 
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(
-  git
-  composer
-  laravel5
+    git
+    docker-compose
+    kubectl
+    gcloud
 )
 
 source $ZSH/oh-my-zsh.sh
 
-# Shell Tweaks
-source ~/Projetos/dotfiles/shell_tweaks
+# ==== PERSONAL CONFIGURATION ====
 
-# Personal Aliases
-source ~/Projetos/dotfiles/aliases
+stty -ixon  # Disables accidental Ctrl + S terminal keystroke
+source .aliases
 
-
-
-
-
-
-
-
+export PATH=$PATH:/home/$HOME/.local/bin
 

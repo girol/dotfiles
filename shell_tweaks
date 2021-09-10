@@ -1,7 +1,0 @@
-# Tilix tweak to disable warning message
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-    source /etc/profile.d/vte.sh
-fi
-
-# Disables accidental Ctrl + S terminal keystroke
-stty -ixon

@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/$HOME/.oh-my-zsh"
+export ZSH="/home/$USER/.oh-my-zsh"
 
 ZSH_THEME="spaceship"
 
@@ -58,7 +58,7 @@ source $ZSH/oh-my-zsh.sh
 
 # ==== PERSONAL CONFIGURATION ====
 
-export PATH=$PATH:/home/$HOME/.local/bin
+export PATH=$PATH:/home/$USER/.local/bin
 
 source .aliases
 source .env
@@ -71,3 +71,4 @@ __start_ssh_agent  # WSL 2
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
+

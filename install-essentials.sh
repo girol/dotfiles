@@ -1,6 +1,8 @@
 #!/bin/bash
 
-echo -e "Installing base packages"
+# Installs the very essential packages to start working
+
+echo -e "Installing essential base packages"
 
 sudo apt install ack \
     apt-transport-https \
@@ -10,9 +12,7 @@ sudo apt install ack \
     gnupg \
     make \
     software-properties-common \
+    stow \
     vim \
     xclip \
     zsh \
-
-echo -e "Copying git config"
-cp ./gitconfig ~/.gitconfig

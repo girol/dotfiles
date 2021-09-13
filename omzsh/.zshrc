@@ -58,8 +58,10 @@ source $ZSH/oh-my-zsh.sh
 
 # ==== PERSONAL CONFIGURATION ====
 
-stty -ixon  # Disables accidental Ctrl + S terminal keystroke
-source .aliases
-
 export PATH=$PATH:/home/$HOME/.local/bin
+
+source .aliases
+source .env
+source .functions
+stty -ixon  # Disables accidental Ctrl + S terminal keystroke
 

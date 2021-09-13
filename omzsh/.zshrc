@@ -65,3 +65,9 @@ source .env
 source .functions
 stty -ixon  # Disables accidental Ctrl + S terminal keystroke
 
+# [ WIP ]
+# The ideal would be to complete this section from a config file or script
+__start_ssh_agent  # WSL 2
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform

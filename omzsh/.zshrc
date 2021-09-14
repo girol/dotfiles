@@ -10,7 +10,7 @@ ZSH_THEME="spaceship"
 # Custom for spaceship
 # =====================
 
-# General
+# General config
 SPACESHIP_USER_SHOW="true"
 
 # SPACESHIP_CHAR_SYMBOL="\uf1d0 " # rebel
@@ -23,14 +23,14 @@ SPACESHIP_PROMPT_ADD_NEWLINE="false"
 SPACESHIP_PROMPT_DEFAULT_PREFIX="$USER @ "
 SPACESHIP_PROMPT_FIRST_PREFIX_SHOW="true"
 
-# Spaceship venv
+# Python venv/pyenv
 SPACESHIP_VENV_PREFIX="(\uf81f "
 SPACESHIP_VENV_COLOR="yellow"
 SPACESHIP_VENV_SUFFIX=") "
-SPACESHIP_KUBECTL_SHOW="true"
-
-# Spaceship Pyenv
 SPACESHIP_PYENV_SHOW="false"
+
+# Kubernetes
+SPACESHIP_KUBECTL_SHOW="true"
 
 SPACESHIP_PROMPT_ORDER=(
     venv
@@ -38,8 +38,11 @@ SPACESHIP_PROMPT_ORDER=(
     dir
     git
     exec_time
+    gcloud
     kubectl
+
     line_sep
+
     char
     jobs
 )

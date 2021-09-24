@@ -62,6 +62,9 @@ source $ZSH/oh-my-zsh.sh
 # ==== PERSONAL CONFIGURATION ====
 export LOCAL_BIN=/home/$USER/.local/bin
 
+# TEMP for tfswitch
+TFSW_BIN=/home/$USER/bin
+
 export PATH=$PATH:$LOCAL_BIN
 
 source .aliases

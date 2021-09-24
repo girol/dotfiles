@@ -67,9 +67,10 @@ TFSW_BIN=/home/$USER/bin
 
 export PATH=$PATH:$LOCAL_BIN
 
-source .aliases
-source .env
-source .functions
+source $HOME/.aliases
+source $HOME/.env
+source $HOME/.functions
+
 stty -ixon  # Disables accidental Ctrl + S terminal keystroke
 
 # [ WIP ]
@@ -78,4 +79,3 @@ __start_ssh_agent  # WSL 2
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
-

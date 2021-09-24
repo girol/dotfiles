@@ -62,10 +62,6 @@ source $ZSH/oh-my-zsh.sh
 # ==== PERSONAL CONFIGURATION ====
 export LOCAL_BIN=/home/$USER/.local/bin
 
-# TEMP for tfswitch
-TFSW_BIN=/home/$USER/bin
-
-export PATH=$PATH:$LOCAL_BIN
 
 source $HOME/.aliases
 source $HOME/.env
@@ -73,9 +69,15 @@ source $HOME/.functions
 
 stty -ixon  # Disables accidental Ctrl + S terminal keystroke
 
-# [ WIP ]
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform
+
+# == [ WIP ] ==
 # The ideal would be to complete this section from a config file or script
 __start_ssh_agent  # WSL 2
 
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/bin/terraform terraform
+# TEMP for tfswitch
+TFSW_BIN=/home/$USER/bin
+
+# Finally
+export PATH=$PATH:$LOCAL_BIN:$TFSW_BIN

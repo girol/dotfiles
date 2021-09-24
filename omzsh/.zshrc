@@ -60,8 +60,9 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # ==== PERSONAL CONFIGURATION ====
+export LOCAL_BIN=/home/$USER/.local/bin
 
-export PATH=$PATH:/home/$USER/.local/bin
+export PATH=$PATH:$LOCAL_BIN
 
 source .aliases
 source .env

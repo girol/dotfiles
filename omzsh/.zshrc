@@ -31,18 +31,22 @@ SPACESHIP_PYENV_SHOW="false"
 
 # Kubernetes
 SPACESHIP_KUBECTL_SHOW="true"
+SPACESHIP_KUBECTL_VERSION_SHOW="false"
+
+# GCloud
+SPACESHIP_GCLOUD_SYMBOL="☁️ "
 
 SPACESHIP_PROMPT_ORDER=(
     venv
     time
     dir
     git
-    exec_time
-    gcloud
+    gcp
     kubectl
 
     line_sep
 
+    exec_time
     char
     jobs
 )

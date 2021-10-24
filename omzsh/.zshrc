@@ -74,7 +74,7 @@ source $HOME/.functions
 stty -ixon  # Disables accidental Ctrl + S terminal keystroke
 
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/bin/terraform terraform
+complete -o nospace -C /home/$USER/bin/terraform terraform
 
 # == [ WIP ] ==
 # The ideal would be to complete this section from a config file or script
@@ -83,5 +83,9 @@ __start_ssh_agent  # WSL 2
 # TEMP for tfswitch
 TFSW_BIN=/home/$USER/bin
 
+GO_PATH=/usr/local/go/bin
+GO_LOCAL_PATH=/home/$USER/go/bin
+
 # Finally
-export PATH=$PATH:$LOCAL_BIN:$TFSW_BIN
+export PATH=$PATH:$LOCAL_BIN:$TFSW_BIN:$GO_PATH:$GO_LOCAL_PATH
+

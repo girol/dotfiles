@@ -63,9 +63,10 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# ==== PERSONAL CONFIGURATION ====
-export LOCAL_BIN=/home/$USER/.local/bin
-
+# ==== PERSONAL CONFIGURATION ===
+export LOCAL_INSTALL=$HOME/.local
+export LOCAL_BIN=$LOCAL_INSTALL/bin
+export NPM_CONFIG_PREFIX=$LOCAL_INSTALL
 
 source $HOME/.aliases
 source $HOME/.env

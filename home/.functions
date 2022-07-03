@@ -28,6 +28,3 @@ __start_ssh_agent() {
     source $source_file >/dev/null 2>&1
 }
 
-vpn() {
-    wg-quick $1 wg0
-}

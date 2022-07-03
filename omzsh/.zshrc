@@ -58,7 +58,6 @@ plugins=(
     git
     docker-compose
     kubectl
-    gcloud
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -67,6 +66,13 @@ source $ZSH/oh-my-zsh.sh
 export LOCAL_INSTALL=$HOME/.local
 export LOCAL_BIN=$LOCAL_INSTALL/bin
 export NPM_CONFIG_PREFIX=$LOCAL_INSTALL
+
+# Python Stuff
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/src
+export VIRTUALENVWRAPPER_SCRIPT=$LOCAL_BIN/virtualenvwrapper.sh
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source $LOCAL_BIN/virtualenvwrapper_lazy.sh
 
 source $HOME/.aliases
 source $HOME/.env
@@ -79,7 +85,7 @@ complete -o nospace -C /home/$USER/bin/terraform terraform
 
 # == [ WIP ] ==
 # The ideal would be to complete this section from a config file or script
-__start_ssh_agent  # WSL 2
+#__start_ssh_agent  # WSL 2
 
 # TEMP for tfswitch
 TFSW_BIN=/home/$USER/bin

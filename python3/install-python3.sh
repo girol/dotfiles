@@ -7,7 +7,6 @@
 sudo apt install \
     python3-pip  \
     python3-setuptools \
-    ipython3
 
 
 pip3 install wheel # dependência em python que padroniza distribuição de pacotes

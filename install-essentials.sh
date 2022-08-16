@@ -10,6 +10,9 @@ sudo apt install ack \
     curl \
     git \
     gnupg \
+    libcurl4-openssl-dev \
+    libmysqlclient-dev \
+    libssl-dev \
     make \
     software-properties-common \
     stow \

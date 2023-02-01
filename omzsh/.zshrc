@@ -27,7 +27,7 @@ SPACESHIP_PROMPT_FIRST_PREFIX_SHOW="true"
 SPACESHIP_VENV_PREFIX="(\uf81f "
 SPACESHIP_VENV_COLOR="yellow"
 SPACESHIP_VENV_SUFFIX=") "
-SPACESHIP_PYENV_SHOW="false"
+SPACESHIP_PYTHON_SHOW="false"
 
 # Kubernetes
 SPACESHIP_KUBECTL_SHOW="true"
@@ -41,7 +41,6 @@ SPACESHIP_PROMPT_ORDER=(
     time
     dir
     git
-    gcp
     kubectl
 
     line_sep
@@ -50,6 +49,8 @@ SPACESHIP_PROMPT_ORDER=(
     char
     jobs
 )
+# Disabled prompts for now
+# gcp
 
 
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -57,8 +58,12 @@ SPACESHIP_PROMPT_ORDER=(
 plugins=(
     git
     docker-compose
-    kubectl
+    docker
 )
+
+# disabled plugins for now
+#    kubectl
+#    gcloud
 
 source $ZSH/oh-my-zsh.sh
 
@@ -85,14 +90,8 @@ complete -o nospace -C /home/$USER/bin/terraform terraform
 
 # == [ WIP ] ==
 # The ideal would be to complete this section from a config file or script
-#__start_ssh_agent  # WSL 2
-
-# TEMP for tfswitch
-TFSW_BIN=/home/$USER/bin
-
-GO_PATH=/usr/local/go/bin
-GO_LOCAL_PATH=/home/$USER/go/bin
+__start_ssh_agent  # WSL 2
 
 # Finally
-export PATH=$PATH:$LOCAL_BIN:$TFSW_BIN:$GO_PATH:$GO_LOCAL_PATH
+export PATH=$PATH:$LOCAL_BIN
 

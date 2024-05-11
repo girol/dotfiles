@@ -1,3 +1,8 @@
+path() {
+    # Parses $PATH variable for easy listing
+    echo $PATH | tr ':' '\n'
+}
+
 pyclean() {
     # Clears all Python cache files:
     # *.pyc
@@ -27,4 +32,3 @@ __start_ssh_agent() {
     ssh-agent -s >$source_file
     source $source_file >/dev/null 2>&1
 }
-

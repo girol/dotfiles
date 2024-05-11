@@ -1,5 +1,24 @@
 # Vim Package
 
+This customization uses [vim-plug](https://github.com/junegunn/vim-plug) as dependency manager.
+
+## Quickstart
+
+To install, download `plug.vim` and put it in the "autoload" directory.
+
+Script:
+
+```shell
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+Run the command:
+
+:PlugInstall
+
+# Motivation
+
 Long time ago, I've starting using vim with the basic:
 
 > i -> type, type, type <ESC>:wq

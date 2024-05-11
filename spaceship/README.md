@@ -1,3 +1,8 @@
+# Installation
+
+Just follow the [zsh-spaceship repository](https://github.com/spaceship-prompt/spaceship-prompt?tab=readme-ov-file#-installation) instructions
+
+
 # Spaceship custom segment
 
 I don't like the built-in `gcloud` segment and made one of my own, based on the original

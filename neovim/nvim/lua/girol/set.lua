@@ -1,8 +1,8 @@
 -- Configuration related to all vim "set" commands
-
-vim.opt.guicursor = ""
+vim.g.mapleader = " "
 
 -- Dev Experience
+vim.opt.guicursor = ""
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.colorcolumn = "88"

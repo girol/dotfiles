@@ -18,3 +18,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup(plugins_path, opts)
 -- END Lazy
+
+-- TODO: Find a way to start this in another file
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1

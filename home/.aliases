@@ -1,3 +1,4 @@
+alias vim="nvim"
 alias itsmine="sudo chown -R $USER:$USER ."
 alias kubectl-disconnect="kubectl config unset current-context"
 alias socks-tunnel="ssh -D 9000 root@server"

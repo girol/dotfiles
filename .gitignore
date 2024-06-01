@@ -1,2 +1,5 @@
 *.swp
 temp/
+
+# Lazy neovim lockfiles
+*lazy-lock.json

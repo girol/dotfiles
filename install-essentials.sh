@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Installs the very essential packages to start working
+# also creates base dirs for other packages, like neovim
 
 echo -e "Installing essential base packages"
 
@@ -19,3 +20,6 @@ sudo apt install ack \
     vim \
     xclip \
     zsh \
+
+echo "---> Creating ~/.config folder"
+mkdir ~/.config

@@ -22,6 +22,7 @@ cd ~/.dotfiles
 ```shell
 stow home
 stow omzsh
+stow neovim -t ~/.config
 stow vim
 ```
 

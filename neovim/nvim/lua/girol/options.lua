@@ -1,8 +1,5 @@
 -- Customization related to all vim defaults: commands, behavior and runtime
 
--- General setup
-vim.g.mapleader = " "
-
 -- enables mouse
 vim.opt.mouse = 'a'
 

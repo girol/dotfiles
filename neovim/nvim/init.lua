@@ -7,9 +7,10 @@ for the most setups I've found.
     So, to keep things less confusing, hard to compare and maintain, I chose this
 folder structure to keep the configuration clean and reproductable
 
-Folder structure was taken from nvim-starter-kit from bcampolo in github
+    Folder structure was taken from nvim-starter-kit from bcampolo in github
 
-]]--
+]]
+   --
 
 -- Configures Lazy Plugin Manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -32,5 +33,13 @@ require("lazy").setup("plugins", opts)
 -- END Lazy
 
 -- Personal configuratio are NOT loaded by lazy
--- require("core.options")
--- require("core.keymaps")
+
+--[[
+    The previous name was "core" from bcampolo.
+    This explicits that this is a full personal configuration
+    Generic names for this kind of setup can be confusing for people (me included)
+    who maybe will use this for future reference.
+
+    > Is it "core" required for some plugin or is it just a personal file?
+]]
+require("girol")

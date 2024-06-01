@@ -70,7 +70,6 @@ source $ZSH/oh-my-zsh.sh
 # ==== PERSONAL CONFIGURATION ===
 export LOCAL_INSTALL=$HOME/.local
 export LOCAL_BIN=$LOCAL_INSTALL/bin
-export NPM_CONFIG_PREFIX=$LOCAL_INSTALL
 
 # Python Stuff
 export WORKON_HOME=$HOME/.virtualenvs
@@ -94,3 +93,7 @@ __start_ssh_agent  # WSL 2
 
 # Finally
 export PATH=$PATH:$LOCAL_BIN
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

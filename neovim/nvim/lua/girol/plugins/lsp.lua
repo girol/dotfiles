@@ -38,9 +38,8 @@ return {
             -- Install these LSPs automatically
             ensure_installed = {
                 'lua_ls',
-                'lemminx',
                 'marksman',
-                'quick_lint_js',
+                'pyright'
             }
         })
 

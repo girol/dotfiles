@@ -18,5 +18,8 @@
         "titleBar.inactiveBackground": "#490db599",
         "titleBar.inactiveForeground": "#e7e7e799"
     },
-    "peacock.remoteColor": "#490db5"
+    "peacock.remoteColor": "#490db5",
+    "Lua.diagnostics.globals": [
+        "vim"
+    ]
 }

@@ -8,6 +8,10 @@
     https://github.com/bcampolo/nvim-starter-kit
 
     Its simplicity made me change my mind and start small
+
+    TODO: With time, understand this dependencies:
+    - Install languages'tools 'WhoIsSethDaniel/mason-tool-installer.nvim'
+    - Autoformatter: stevearc/conform.nvim'
 ]]
 --
 

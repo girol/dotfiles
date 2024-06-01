@@ -10,7 +10,7 @@ folder structure to keep the configuration clean and reproductable
     Folder structure was taken from nvim-starter-kit from bcampolo in github
 
 ]]
-   --
+--
 
 -- Configures Lazy Plugin Manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -33,10 +33,9 @@ require("lazy").setup("plugins", opts)
 -- END Lazy
 
 -- Personal configuratio are NOT loaded by lazy
-
 --[[
     The previous name was "core" from bcampolo.
-    This explicits that this is a full personal configuration
+    This name explicits that this is a full personal configuration
     Generic names for this kind of setup can be confusing for people (me included)
     who maybe will use this for future reference.
 

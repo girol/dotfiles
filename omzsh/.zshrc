@@ -6,6 +6,8 @@ export ZSH="/home/$USER/.oh-my-zsh"
 
 ZSH_THEME="spaceship"
 
+# comment
+
 # =====================
 # Custom for spaceship
 # =====================
@@ -59,6 +61,7 @@ plugins=(
     git
     docker-compose
     docker
+    poetry
 )
 
 # disabled plugins for now

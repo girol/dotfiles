@@ -40,9 +40,10 @@ return {
         require('mason').setup()
         require('mason-tool-installer').setup({
             ensure_installed = {
-                "isort",
                 "black",
                 "flake8",
+                "isort",
+                "prettier",
                 "stylua",
             }
 

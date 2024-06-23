@@ -8,18 +8,20 @@ local telescope = require("telescope.builtin")
 local conform = require("conform")
 
 -- Telescope
--- Default mappings suggested by documentation
-keymap.set("n", "<leader>ff", telescope.find_files, {})
-keymap.set("n", "<leader>fg", telescope.live_grep, {})
-keymap.set("n", "<leader>fb", telescope.buffers, {})
-keymap.set("n", "<leader>fh", telescope.help_tags, {})
+keymap.set("n", "<leader>tf", telescope.find_files, { desc = "Telescope Find Files" })
+keymap.set("n", "<leader>tg", telescope.live_grep, { desc = "Telescope Live Grep" })
+keymap.set("n", "<leader>tb", telescope.buffers, { desc = "Telescope Buffers" })
+keymap.set("n", "<leader>th", telescope.help_tags, { desc = "Telescope Help Tags" })
+
+keymap.set("n", "<leader>tk", telescope.keymaps, { desc = "Telescope Keymaps" })
+keymap.set("n", "<leader>tt", telescope.builtin, { desc = "Telescope Open " })
 
 -- nvim-tree
-keymap.set("n", "<leader>ee", ":NvimTreeToggle<CR>") -- toggle file explorer
-keymap.set("n", "<leader>ef", ":NvimTreeFindFile<CR>") -- find file in file explorer
+keymap.set("n", "<leader>ee", ":NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
+keymap.set("n", "<leader>ef", ":NvimTreeFindFile<CR>", { desc = "Find file in file explorer" })
 
 -- diffview
-keymap.set("n", "<leader>dv", ":DiffviewOpen<CR>", { desc = "Opens diffview"})
+keymap.set("n", "<leader>dv", ":DiffviewOpen<CR>", { desc = "Opens diffview" })
 
 -- conform - formatting plugin
 keymap.set({ "n", "v" }, "<leader>ft", function()

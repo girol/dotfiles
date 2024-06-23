@@ -18,6 +18,9 @@ keymap.set("n", "<leader>fh", telescope.help_tags, {})
 keymap.set("n", "<leader>ee", ":NvimTreeToggle<CR>") -- toggle file explorer
 keymap.set("n", "<leader>ef", ":NvimTreeFindFile<CR>") -- find file in file explorer
 
+-- diffview
+keymap.set("n", "<leader>dv", ":DiffviewOpen<CR>", { desc = "Opens diffview"})
+
 -- conform - formatting plugin
 keymap.set({ "n", "v" }, "<leader>ft", function()
 	conform.format({

@@ -22,11 +22,11 @@ return {
     'neovim/nvim-lspconfig',
     -- event = 'VeryLazy',
     dependencies = {
-        -- LSP Management
-        -- https://github.com/williamboman/mason.nvim
+        -- LSP and Tooling management
         { 'williamboman/mason.nvim' },
-        -- https://github.com/williamboman/mason-lspconfig.nvim
         { 'williamboman/mason-lspconfig.nvim' },
+        -- Maybe this is not necessary. Taken for a working configuration
+        { "WhoIsSethDaniel/mason-tool-installer.nvim" },
 
         -- Useful status updates for LSP
         -- https://github.com/j-hui/fidget.nvim
@@ -38,6 +38,17 @@ return {
     },
     config = function()
         require('mason').setup()
+        require('mason-tool-installer').setup({
+            ensure_installed = {
+                "black",
+                "flake8",
+                "isort",
+                "prettier",
+                "stylua",
+            }
+
+        })
+
         require('mason-lspconfig').setup({
             -- Install these LSPs automatically
             ensure_installed = {
@@ -46,6 +57,7 @@ return {
                 'pyright'
             }
         })
+
 
         local lspconfig = require('lspconfig')
         local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()

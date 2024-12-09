@@ -3,6 +3,7 @@ alias vim="nvim"
 alias wk="cd ~/src/work"
 alias itsmine="sudo chown -R $USER:$USER ."
 alias socks-tunnel="ssh -D 9000 root@server"
+alias venv="source .venv/bin/activate"
 
 # SRE
 alias kubectl-disconnect="kubectl config unset current-context"

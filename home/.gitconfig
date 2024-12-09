@@ -2,7 +2,7 @@
     name = André Luiz Girol
     email = andregirol@gmail.com
 [core]
-    editor = vim
+    editor = nvim
 [color]
     ui = true
 [color "status"]
